@@ -137,5 +137,3 @@ function SelectionSort(arr) {
 // let SelectionArr = [7, 6, 5, 4, 3, 2, 1];
 // SelectionSort(SelectionArr);
 // console.log(SelectionArr);
-
-

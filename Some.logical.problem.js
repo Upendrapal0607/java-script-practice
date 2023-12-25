@@ -3,8 +3,6 @@
 
 function SumOfK(arr,n,K){
     let Obj={};
-    // Obj[1]="upendra"
-    // console.log(2 in Obj);
     for(let i=0;i<n;i++){
         let compliment= K-arr[i];
         if(compliment in Obj) {
