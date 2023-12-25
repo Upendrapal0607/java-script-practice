@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+           
+            margin: auto;
+            padding: 0px;
+            width: 99vw;
+            height: 99vh;
+
+        }
+        .root{
+         text-align: center;
+        }
+        .model{
+            width: 50%;
+            height: 50vh;
+          border: 2px solid blueviolet;
+          margin: auto;
+          background: linear-gradient(45deg, #3498db, #e74c3c);
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 18px;
+      font-family: Arial, sans-serif;
+      position: fixed; 
+     top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+          visibility: hidden;
+        }
+        .sow-box{
+visibility: visible;
+        }
+        button{
+            background-color: #3498db;
+            padding: .6rem 2rem;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #148fe1;
+        }
+    </style>
+</head>
+<body class="body">
+ <div class="root"> 
+ <h1>JAVASCRIPT PRACTICE</h1>
+    <button class="open">OPEN</button>
+    <button class="close">CLOSE</button>
+ </div>
+ <div id="model" class="model">
+    Hello, I'm a colored box!
+</div>
+</body>
+<script src="index.js"></script>
+<script src="index2.js"></script>
+</html>
