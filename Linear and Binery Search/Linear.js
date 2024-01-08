@@ -6,7 +6,7 @@ function LinearSearch(arr,k){
       if(arr[i]==k) return arr[i]
        
     }
-    return min
+    return `${k} is not found`
 }
 console.log(LinearSearch(arr,k));
 

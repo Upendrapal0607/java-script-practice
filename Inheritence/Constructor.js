@@ -51,7 +51,7 @@ const myObject = {
 }
 let myObject2 = TestCode.call(myObject, "hello", "guys");
 console.log(myObject2); //{ name: 'Upendra pal', text: 'hello', group: 'guys' }
-let myObject3 = TestCode.apply(myObject, ["hii", "everyone"])();
+let myObject3 = TestCode.apply(myObject, ["hii", "everyone"]);
 console.log(myObject3); //{ name: 'Upendra pal', text: 'hii', group: 'everyone' }
 let myObject4 = TestCode.bind(myObject, "hey", "freinds")(); //{ name: 'Upendra pal', text: 'hey', group: 'freinds' }
 console.log(myObject4);
@@ -59,4 +59,5 @@ console.log(myObject4);
 console.log("final-->",myObject2,myObject3,myObject4);
 //final--> { name: 'Upendra pal', text: 'hey', group: 'freinds' }
 //         { name: 'Upendra pal', text: 'hey', group: 'freinds' }
-//         { name: 'Upendra pal', text: 'hey', group: 'freinds' }
+//         { name: 'Upendra pal', text: 'hey', group: 'freinds' }  
+//  becoause all the tree Object reference is myObject they are refer same object not blue copy of it. 

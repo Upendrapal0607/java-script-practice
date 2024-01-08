@@ -36,7 +36,8 @@ function FirstName(first_name){
 
 // Q.4 Guess output 
 
-// const Main=()=>{
+//4.a
+//  const Main=()=>{
 //     var a=10;
 //     let foo=()=>console.log(a);
 //     let bar=()=>{
@@ -46,5 +47,50 @@ function FirstName(first_name){
 //     bar()
 // }
 // Main()
+// ans: output 10
+
+
+
+
+// 4.b
+//  const Counter=()=>{
+//     let count=10;
+//     let CounterVlaue=()=>{
+// count++;
+// console.log(count);
+// };
+
+// return CounterVlaue
+// }
+
+// let outPut = Counter();
+// outPut();
+// outPut();
+// outPut();
+// output :
+//       11
+//       12
+//       13
+
+// 4.c
+//  const Counter2=()=>{
+//     let count=10;
+//     let CounterVlaue2=()=>{
+// count++;
+// console.log(count);
+// };
+
+// CounterVlaue2()
+// }
+
+//  Counter2();
+//  Counter2();
+//  Counter2();
+// output : 
+//      11
+//      11
+//      11
+
 
 // ans: output 10
+

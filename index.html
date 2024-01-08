@@ -19,6 +19,8 @@
         .model{
             width: 50%;
             height: 50vh;
+            display: flex;
+            gap: 1rem;
           border: 2px solid blueviolet;
           margin: auto;
           background: linear-gradient(45deg, #3498db, #e74c3c);
@@ -57,7 +59,8 @@ visibility: visible;
     <button class="close">CLOSE</button>
  </div>
  <div id="model" class="model">
-    Hello, I'm a colored box!
+   <button onclick="Debounce()">Debounce</button>
+   <button onclick="Throttle()">Throttle</button>
 </div>
 </body>
 <script src="index.js"></script>
