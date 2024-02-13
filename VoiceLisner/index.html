@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        button {
+            margin: 10px;
+            padding: 5px 10px;
+            font-size: 16px;
+        }
+    </style>
+    <title>Speech Recognition Example</title>
+</head>
+<body>
+    <button id="startButton">Start Recognition</button>
+    <button id="stopButton" disabled>Stop Recognition</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition || window.oSpeechRecognition;
+
+            if (!SpeechRecognition) {
+                console.error('SpeechRecognition not supported in this browser');
+                return;
+            }
+
+            const recognition = new SpeechRecognition();
+
+            recognition.onresult = (event) => {
+                const transcript = event.results[0][0].transcript;
+                console.log('Recognized speech:', transcript);
+            };
+
+            recognition.onend = () => {
+                document.getElementById('startButton').disabled = false;
+                document.getElementById('stopButton').disabled = true;
+            };
+
+            document.getElementById('startButton').addEventListener('click', () => {
+                recognition.start();
+                document.getElementById('startButton').disabled = true;
+                document.getElementById('stopButton').disabled = false;
+            });
+
+            document.getElementById('stopButton').addEventListener('click', () => {
+                recognition.stop();
+            });
+        });
+    </script>
+</body>
+</html>

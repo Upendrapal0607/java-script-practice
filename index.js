@@ -1,4 +1,8 @@
 
+const Open= () =>{
+window.location="https://www.google.com/"
+}
+
 //Q.1 Clouser in ES6
 const Outer=a=>b=>()=>console.log(a+b);
 // let outer= Outer(10)(20)
@@ -25,29 +29,40 @@ function FirstName(first_name){
 
 //Q.3 Imidiate function called
 
-// (function (a){
-// let b= "pal"
-// return function(){
-//     console.log(`${a} ${b}`);
-// }
-// })("Upendra")()
+(function (a){
+let b= "pal"
+return function(){
+    console.log(`${a} ${b}`);
+}
+})("Upendra")()
 
 
 
 // Q.4 Guess output 
 
 //4.a
-//  const Main=()=>{
-//     var a=10;
-//     let foo=()=>console.log(a);
-//     let bar=()=>{
-// var a= 20
-// foo()
-//     }
-//     bar()
-// }
-// Main()
-// ans: output 10
+ const Main=()=>{
+    var a=10;
+    let foo=()=>console.log(a);
+    let bar=()=>{
+ var a= 20
+foo()
+    }
+    bar()
+}
+Main()
+// Main2()
+ const Main2=()=>{
+    var a=10;
+    let foo=()=>console.log(a);
+    let bar=()=>{
+ a= 20
+foo()
+    }
+    bar()
+}
+Main2()
+// ans: output 20
 
 
 

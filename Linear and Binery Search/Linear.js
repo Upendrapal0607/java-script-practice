@@ -1,5 +1,5 @@
 // Linear Search  is use for searxhing an element in the array where it will take onabort(n) space complecity
-let arr= [5,4,3,6,8];k=8
+let arr= [5,4,3,6,8];k=4
 function LinearSearch(arr,k){
 
     for (let i = 0; i < arr.length; i++) {
@@ -44,3 +44,21 @@ return -1
 }
 
 console.log(BinarySearch(SortedArr,target));
+
+
+function SecondLarge(arr){
+    let largest = -Infinity;
+    let secondLargest= -Infinity;
+    for(let el of arr){
+        if (el > largest) {
+            secondLargest = largest;
+            largest = el;
+        } 
+        else if (el > secondLargest && el != largest) {
+            secondLargest = el;
+        }
+    }
+    return secondLargest
+}
+
+console.log(SecondLarge([5,4]));

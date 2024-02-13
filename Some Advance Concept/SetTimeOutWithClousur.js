@@ -6,12 +6,12 @@ function Outer(){
     let a=10
    
    return function Inner(b){
-        return ()=>a+b
+       return a+b
 }
 }
 let fn= Outer()
 
-console.log(fn(10)());
+console.log("Inner return value",fn(10));
 
 
 
@@ -20,11 +20,11 @@ console.log(fn(10)());
 
 let arr= [1,2,3,4];
 
-for (var i = 0; i < arr.length; i++) {
-   setTimeout(() => {
-    console.log(i,arr[i]);
-   }, i*1000); 
-}
+// for (var i = 0; i < arr.length; i++) {
+//    setTimeout(() => {
+//     console.log(i,arr[i]);
+//    }, i*1000); 
+// }
 // this code will give you
 // output:
 //  4 undefined
@@ -33,11 +33,11 @@ for (var i = 0; i < arr.length; i++) {
 //  4 undefined
 // because of the globle scope
 
-for (let i = 0; i < arr.length; i++) {
-   setTimeout(() => {
-    console.log(i,arr[i]);
-   }, i*1000); 
-}
+// for (let i = 0; i < arr.length; i++) {
+//    setTimeout(() => {
+//     console.log(i,arr[i]);
+//    }, i*1000); 
+// }
 // this code will give you
 // output:
 //  0 1
@@ -48,15 +48,15 @@ for (let i = 0; i < arr.length; i++) {
 
 // we can acheive it also using other method or way look bello code
 
-function Display1(i) {
-    setTimeout(() => {
-  console.log(i,arr[i]);
- }, i*1000); 
-}
+// function Display1(i) {
+//     setTimeout(() => {
+//   console.log(i,arr[i]);
+//  }, i*1000); 
+// }
 
-for (var i = 0; i < arr.length; i++) {
-  Display1(i)
-}
+// for (var i = 0; i < arr.length; i++) {
+//   Display1(i)
+// }
 
 function Display2(i) {
       setTimeout(() => {

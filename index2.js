@@ -28,8 +28,8 @@ function CloseBox(e) {
 //     console.log("helo");
 // })
 
-function FetchFun() {
-  console.log("fetchData");
+function FetchFun(value) {
+  console.log(value);
 }
 
 // Throttle method
@@ -38,9 +38,9 @@ let id2;
 const Throttle = () => {
   if (!id2) {
     id2 = setTimeout(() => {
-      FetchFun();
+      FetchFun("Throttle handle ofter 2 sec");
       id2 = null;
-    }, 1000);
+    }, 2000);
   }
 };
 
@@ -51,7 +51,27 @@ const Debounce = () => {
   if (id) {
     clearInterval(id);
   }
-  return (id = setTimeout(() => {
-    FetchFun();
-  }, 1000));
+  id = setTimeout(() => {
+    FetchFun("Debounce handle ofter 2 sec");
+  }, 2000);
 };
+
+// let checkId;
+// const throttleAgain = () =>{
+// if(!checkId){
+//   checkId = setTimeout(()=>{
+//     // function call
+//     // checkId = null  again set check id to null
+//   },1000)
+// }
+// }
+
+// let checkIdDebounce;
+// const NewDebounce = ()=>{
+//   if (checkIdDebounce) {
+//     clearInterval(checkIdDebounce)
+//   }
+//    checkIdDebounce= setTimeout(() => {
+//     // function call here
+//   }, 1000);
+// }
