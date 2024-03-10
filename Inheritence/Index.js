@@ -1,9 +1,20 @@
 // 50 Javascript questions every developer should know the behavior of Javascript
 
 // 1.
+//  a.
 // const arr = [1, 2, 3];
 // arr[10] = 11;
 // console.log(arr.length);  11
+// b.
+let arr1 = [1, 2, 3][1];
+// console.log(arr1); // 2
+let arr2 = [1, 2, 3][(1, 2)];
+// console.log(arr2); //3
+let arr3 = [1, 2, 3, 4, 5, 6, 7, 8, 9][(3, 4, 5)];
+// console.log(arr3); //6
+//  becouse all this behavior like this:
+//  it will consosidered arr1[1] , arr2[2] , arr3[5]
+// where first arr become normal array but last one is acessible the element of index at 1,2,5
 
 // 2.
 // const func = () => "Hello";
@@ -212,83 +223,80 @@
 // console.log(a); //20
 // console.log(b);
 
-
-
 // practice question for you:
 // a. guess the output:
 //       let a = 20
 //       console.log(a.toFixed(4));
 // b. guess the output:
-    //   console.log(2 * 3 + "2");
-    //   console.log(2 + "3" * 2);
+//   console.log(2 * 3 + "2");
+//   console.log(2 + "3" * 2);
 
 // console.log([] + {}); //[Object Object]
-
 
 // let users = [
 
 //     {
-  
+
 //         name: 'Arvind',
-  
+
 //         age: 21,
-  
+
 //         gender: 'MALE',
-  
+
 //         documents: ['Adhar', '12_Marksheet']
-  
+
 //     },
-  
+
 //     {
-  
+
 //         name: 'Sunil',
-  
+
 //         age: 15,
-  
+
 //         gender: 'MALE',
-  
+
 //         documents: ['Pancard', 'Passport']
-  
+
 //     },
-  
+
 //     {
-  
+
 //         name: 'Rahul',
-  
+
 //         age: 18,
-  
+
 //         gender: 'MALE',
-  
+
 //         documents: ['10_Marksheet']
-  
+
 //     },
-  
+
 //     {
-  
+
 //         name: 'Neha',
-  
+
 //         age: 21,
-  
+
 //         gender: 'FFMALE',
-  
+
 //         documents: ['Adhar', '1O_Marksheet', 'Pancard']
-  
+
 //     },
-  
+
 //     {
-  
+
 //         name: 'Tanu',
-  
+
 //         age: 21,
-  
+
 //         gender: 'FFMALE',
-  
+
 //         documents: []
-  
+
 //     }
-  
+
 //   ]
-  let selectedDocuments = ['Adhar', '1O_Marksheet']
+let selectedDocuments = ["Adhar", "1O_Marksheet"];
 
 //   let filteredUsers = users.filter(user => {
 //     for (let el of selectedDocuments) {
@@ -298,4 +306,4 @@
 //     }
 //   });
 
-  console.log(selectedDocuments);
+console.log(selectedDocuments);
