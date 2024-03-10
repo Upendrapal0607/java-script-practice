@@ -3,6 +3,7 @@ const close = document.querySelector(".close");
 const open = document.querySelector(".open");
 const model = document.getElementById("model");
 
+
 const OpenBox = (e) => {
   // console.log(e);
   model.classList.add("sow-box");
@@ -75,3 +76,40 @@ const Debounce = () => {
 //     // function call here
 //   }, 1000);
 // }
+// {postId,id,name,email,body}
+function CreateHtmlData({postId,id,name,email,body}){
+return `
+<div class = "card" onClick="NavigateToSinglePage(${id})">
+<h1>${name}</h1>
+<h4>${email}</h4>
+<p>${body}</p>
+</div>
+`
+}
+const SowData = data=>{
+let root=document.querySelector(".root")
+root.innerHTML=null
+let htmlData = data.map(el=>CreateHtmlData({...el})).join("")
+root.innerHTML=htmlData
+}
+// SowData([`<h1>hello india</h1>`,`<h1>hello india</h1>`,`<h1>hello india</h1>`])
+
+   window.addEventListener("load", async()=>{
+      try {
+    await fetch("https://jsonplaceholder.typicode.com/comments").then(res=>res.json())
+    .then(useData=>SowData(useData)).catch(error=>console.log({error}))
+   
+     } catch (error) {
+    console.log({error});
+    }
+   })
+
+   async function NavigateToSinglePage(id) {
+    try {
+      await fetch(`https://jsonplaceholder.typicode.com/comments?id=${id}`).then(res=>res.json())
+      .then(useData=>SowData(useData)).catch(error=>console.log({error}))
+     
+       } catch (error) {
+      console.log({error});
+      }
+   }

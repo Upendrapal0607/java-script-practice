@@ -18,7 +18,7 @@ const Fib=n=>{
 // DP method 
 const DPFib=(n,memo={})=>{
     if(n in memo) return memo[n]
-    if(n==1||n==2) return 1;
+    if(n==0||n==1) return n;
     memo[n]= DPFib(n-1,memo)+DPFib(n-2,memo);
     return memo[n]
 }
