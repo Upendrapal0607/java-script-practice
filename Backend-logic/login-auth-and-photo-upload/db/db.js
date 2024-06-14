@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
+require('dotenv')/config()
 const dburi =
-  "mongodb+srv://zaid:mongo%40123@cluster0.4xn39.mongodb.net/rendezvous-uat?socketTimeoutMS=30000&retryWrites=true";
+  process.env.MONGO_URL;
 
   const connectDB = async () => {
     try {
